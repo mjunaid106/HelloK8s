@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  webapp:
+    image: mojo106/dotnet-webapp-docker:latest
+    build:
+      context: .
+      dockerfile: DotnetWebApp/Dockerfile
+    ports:
+      - "50080:80"
+      - "50443:443"
